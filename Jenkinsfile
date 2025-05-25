@@ -8,11 +8,15 @@ pipeline {
         }
         stage('Build') {
             steps {
-                mvn clean install
+               sh 'mvn clean install'
             }
         }
         
-        
+        stage('Package') {
+            steps {
+                sh 'mvn package'
+            }
+        }
        
     }
     post {
