@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-		label 'linux'
-	}
+    agent any
     stages {
         stage('Checkout') {
             steps {
@@ -10,11 +8,15 @@ pipeline {
         }
         stage('Build') {
             steps {
-               sh 'mvn clean install'
+               bat 'mvn clean install'
             }
         }
         
-       
+        stage('Package') {
+            steps {
+                bat 'mvn package'
+            }
+        }
        
     }
     post {
