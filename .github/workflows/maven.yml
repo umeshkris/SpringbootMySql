@@ -1,11 +1,14 @@
-name: Java CI with Maven
+name: SpringBoot-GitHubActions
  # push:
   #   branches: [ "Springboot-sql-dev" ]
   # pull_request:
   #   branches: [ "main" ]
+   #  [workflow_dispatch]
 
 on:
-   [workflow_dispatch]
+   push :
+      branches : ["Springboot-sql-dev" ]
+ 
  
 jobs:
   build:
