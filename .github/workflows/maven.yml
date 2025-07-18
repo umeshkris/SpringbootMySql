@@ -1,7 +1,7 @@
 name: Java CI with Maven
 
 on:
-   workflow_dispatch
+   workflow_dispatch :
   # push:
   #   branches: [ "Springboot-sql-dev" ]
   # pull_request:
