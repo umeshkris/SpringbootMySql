@@ -3,7 +3,7 @@ name: Java CI with Maven and Docker
 on:
   push:
     branches:
-      - main
+      - Springboot-sql-dev
   pull_request:
     branches:
       - main
