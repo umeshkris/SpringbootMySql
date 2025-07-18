@@ -34,7 +34,7 @@ jobs:
   
 
     - name : Build and push
-      uses: build-push-action@v5
+      uses: mr-smithers-excellent/docker-build-push@v6
       with :
           image: a725133/springbootsql
           tags: latest
