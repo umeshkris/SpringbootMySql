@@ -35,6 +35,7 @@ jobs:
         needs: deploy
         runs-on: ubuntu-latest
         steps:
+         - uses: actions/checkout@v4    
          - name: list of files
            run : ls -R
          - name: Build and push Docker image
