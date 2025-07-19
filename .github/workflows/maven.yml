@@ -1,12 +1,13 @@
 name: Java CI with Maven and Docker
 
 on:
-  push:
-    branches:
-      - Springboot-sql-dev
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch: 
+  # push:
+  #   branches:
+  #     - Springboot-sql-dev
+  # pull_request:
+  #   branches:
+  #     - main
 
 jobs:
   build:
