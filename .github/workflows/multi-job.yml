@@ -27,17 +27,17 @@ jobs:
                 name: springbootmysql
                 path: target/*.jar  
 
-    deploy:
-        needs: build
-        runs-on: ubuntu-latest
-        steps:
-            - name: Login Docker
-              uses: docker/login-action@v3
-              with :
-                username: ${{ vars.DOCKERHUB_USERNAME }}
-                password: ${{ secrets.DOCKERHUB_TOKEN }}
+    # deploy:
+    #     needs: build
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: Login Docker
+    #           uses: docker/login-action@v3
+    #           with :
+    #             username: ${{ vars.DOCKERHUB_USERNAME }}
+    #             password: ${{ secrets.DOCKERHUB_TOKEN }}
     push :
-        needs: deploy
+        # needs: deploy
         runs-on: ubuntu-latest
         steps:
          - uses : actions/checkout@v4
