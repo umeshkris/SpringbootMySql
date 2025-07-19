@@ -35,11 +35,13 @@ jobs:
         needs: deploy
         runs-on: ubuntu-latest
         steps:
+         - name: list of files
+           run : ls -R
          - name: Build and push Docker image
            uses: docker/build-push-action@v6
            with:
             context: .
-            file : ./Dockerfile
+            file : Dockerfile
             push: true
             tags: a725133/springboot-sql:latest
        
