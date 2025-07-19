@@ -92,7 +92,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>springbootmysql.jar</finalName>
+		<finalName>springbootmysql</finalName>
 	</build>
 
 </project>
