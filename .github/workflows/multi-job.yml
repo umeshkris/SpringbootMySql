@@ -45,10 +45,11 @@ jobs:
            uses: actions/download-artifact@v4
            with:
             name: springbootmysql
+            path: target
 
          - name: list of  files
            run : ls -ls target
-           
+
          - name: Build and push Docker image
            uses: docker/build-push-action@v6
            with:
