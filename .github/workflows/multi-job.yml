@@ -40,13 +40,15 @@ jobs:
         needs: deploy
         runs-on: ubuntu-latest
         steps:
-         - uses: actions/checkout@v4  
+         
          - name: Download build artifact
            uses: actions/download-artifact@v4
            with:
-            name: springbootmysql 
+            name: springbootmysql
+
          - name: list of  files
            run : ls -ls target
+           
          - name: Build and push Docker image
            uses: docker/build-push-action@v6
            with:
